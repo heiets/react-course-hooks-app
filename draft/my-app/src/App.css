@@ -1,11 +1,11 @@
 .Main {
   background-color: #d8d8d8;
   height: 100vh;
+  padding: 24px;
 }
 
 .CardList {
   display: flex;
-  padding: 24px;
 }
 
 .Card {
@@ -19,6 +19,7 @@
   font-size: 14px;
   color: #fff;
   margin-left: 24px;
+  box-shadow: 3px 3px 12px 1px rgba(0,0,0,0.25);
 }
 
 .Card:first-child {
@@ -56,4 +57,30 @@
 }
 .Information > div {
   margin-top: 4px;
+}
+
+.InputWrap {
+  display: flex;
+  height: 50px;
+  margin-bottom: 24px;
+  border-radius: 12px;
+  box-shadow: 3px 3px 12px 1px rgba(0,0,0,0.25);
+}
+
+.Input {
+  width: 80%;
+  padding: 4px 8px;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  background-color: #3A8AC0;
+  font-size: 18px;
+  color: #fff;
+  border: none;
+  outline: 0;
+}
+
+.AddButton {
+  width: 20%;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
 }

@@ -1,11 +1,12 @@
-import React from 'react';
+import React, {memo} from 'react';
 import { useWeather } from '../hooks/useWeather';
 
 import '../App.css';
 
-export const Card = ({ cityName }) => {
+const CardNoMemo = ({ cityName }) => {
     const data = useWeather({ cityName });
     if (!data) return null;
+    console.log('Render cityName', cityName);
     const { name, weather, main } = data;
     const { description, icon } = weather[0];
     const { temp, humidity, feels_like } = main;
@@ -19,8 +20,10 @@ export const Card = ({ cityName }) => {
             </div>
             <div className="Information">
                 <div>Humidity: {humidity}</div>
-                <div>Feels like: {feels_like}</div>
+                <div>Feels like: {feels_like.toFixed()}</div>
             </div>
         </div>
     )
 };
+
+export const Card = memo(CardNoMemo);
